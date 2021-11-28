@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "296323042703",
+    "project_id": "loginregister-cc08b",
+    "storage_bucket": "loginregister-cc08b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:296323042703:android:cccf9a9c6d6b2039534ffa",
+        "android_client_info": {
+          "package_name": "com.example.loginregister"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "296323042703-enp8dhhdq8lpis8cvel5i2n846d61439.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.loginregister",
+            "certificate_hash": "1e1250c08197034fb6c4ab5dc9d90c3363e31a29"
+          }
+        },
+        {
+          "client_id": "296323042703-664sqjjcgt3jv4pts4lc0pcc0aribppj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYiYznqrC4iyTLoh_rRVsZ6QXYhbLrHu4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "296323042703-664sqjjcgt3jv4pts4lc0pcc0aribppj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
