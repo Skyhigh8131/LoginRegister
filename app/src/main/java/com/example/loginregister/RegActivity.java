@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -62,6 +63,9 @@ public class RegActivity extends AppCompatActivity
                             // setValue: database에 insert(삽입) 행위
                             mDatebaseRef.child("UserAccount").child(firebaseUser.getUid()).setValue(account);
 
+                            Intent intent = new Intent(RegActivity.this, LogInActivity.class);
+                            startActivity(intent);
+                            finish();
                             Toast.makeText(RegActivity.this, "회원가입에 성공했어요!", Toast.LENGTH_SHORT).show();
 
                         } else{
