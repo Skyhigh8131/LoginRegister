@@ -3,7 +3,7 @@ package com.example.loginregister;
 public class UserAccount
 {
     private String idToken; //Firebase Uid (고유 토큰 정보)
-    private String nameID; //이름
+    private String Email; //이메일
     private String Hackbun; //학번
 
     public UserAccount() { }
@@ -16,12 +16,10 @@ public class UserAccount
         this.idToken = idToken;
     }
 
-    public String getNameID() {
-        return nameID;
-    }
+    public String getNameID() { return Email; }
 
-    public void setNameID(String nameID) {
-        this.nameID = nameID;
+    public void setEmail(String email) {
+        this.Email = email;
     }
 
     public String getHackbun() {
