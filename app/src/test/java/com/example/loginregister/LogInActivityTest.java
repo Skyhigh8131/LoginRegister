@@ -20,6 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import junit.framework.TestCase;
 
 import org.junit.Before;
+import org.junit.Test;
 
 import java.util.regex.Pattern;
 
@@ -31,28 +32,30 @@ public class LogInActivityTest extends TestCase {
         userAccount = new UserAccount();
     }
 
-    public boolean isWriteDone(){
-        Pattern emailPattern = Patterns.EMAIL_ADDRESS;
+    public boolean isWriteCorrect(){
+        Pattern emailPattern = Pattern.compile("^[_a-zA-Z0-9-\\.]+@[\\.a-zA-Z0-9-]+\\.[a-zA-Z]+$");
         Pattern idPattern = Pattern.compile("(^[0-9]*$)");
 
-        if(((userAccount.getEmail().toString().length() == 0) || (!emailPattern.matcher(userAccount.getEmail().toString()).matches())) ||
-        ((userAccount.getHackbun().toString().length() == 0) || (!idPattern.matcher(userAccount.getHackbun().toString()).matches())))
-        {
-            return false;
+        String id = userAccount.getHackbun().toString();
+        String email = userAccount.getEmail().toString();
+
+        if(id.length() != 0 && email.length() != 0){
+            return(emailPattern.matcher(email).matches() && idPattern.matcher(id).matches());
         }
-        else{
-            return true;
+        else {
+            return false;
         }
     }
 
+    @Test
     public void testOnClick() {
-        boolean isWriteDone;
 
-        userAccount.setEmail("lyuss0213@naver.com");
-        userAccount.setHackbun("유준호");
 
-        isWriteDone = isWriteDone();
+        userAccount.setEmail("");
+        userAccount.setHackbun("");
 
-        assertEquals(isWriteDone, true);
+        boolean isWriteDone = isWriteCorrect();
+
+        assertEquals(true, isWriteDone);
     }
 }
