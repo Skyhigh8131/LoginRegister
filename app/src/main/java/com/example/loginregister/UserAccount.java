@@ -16,7 +16,7 @@ public class UserAccount
         this.idToken = idToken;
     }
 
-    public String getNameID() { return Email; }
+    public String getEmail() { return Email; }
 
     public void setEmail(String email) {
         this.Email = email;
